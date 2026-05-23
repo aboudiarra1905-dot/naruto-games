@@ -1,0 +1,160 @@
+
+
+/* === GLOBAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* === MENU === */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  margin: 0 20px;
+}
+
+.menu-container h1 {
+  color: #00ff80;
+  margin-bottom: 15px;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.level-btn {
+  background: #00ff80;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000;
+}
+
+.level-btn:hover { background: #00cc66; transform: scale(1.05); }
+
+/* === JEU === */
+.game-container { margin-top: 20px; }
+
+.stats { display: flex; justify-content: center; gap: 30px; margin-bottom: 15px; }
+
+.game-board {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 70px;
+  height: 90px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card.flip { transform: rotateY(180deg); }
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.front{
+background-color: #00ff80;
+font-size: xx-large;
+}
+
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transform: rotateY(180deg);
+}
+
+#winMessage {
+  margin-top: 25px;
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hidden { display: none; }
+
+button {
+  background: #00ff80;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+button:hover { background: #00cc66; }
+
+
+.btn{
+  text-align: start;
+  font-weight: bold;
+  margin-left: 2px;
+  background-color:#00ff80;
+  color: green;
+  border-radius: 5px;
+ text-decoration: none;
+ font-size: x-large;
+}
+
+#highscores {
+  margin-top: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#highscores h3 {
+  margin-bottom: 10px;
+  color: #00ff80;
+}
+
+#highscores ul {
+  list-style: none;
+  padding: 0;
+}
+
+#highscores li {
+  margin: 5px 0;
+  font-weight: bold;
+}

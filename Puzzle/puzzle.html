@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Naruto</title>
+  <link rel="stylesheet" href="../bootstrap/css/theme.css">
+  <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+
+  <div class="profil-container">
+    <h2>📝 Profil du joueur</h2>
+    <p>Pseudo : <span id="playerName"></span></p>
+    <p>XP : <span id="playerXP">0</span></p>
+    <p>Rang : <span id="playerRank">Genin 🥋</span></p>
+    <div id="rankBar"></div>
+  </div>
+
+  <div class="controls">
+    <label for="difficulty">Grille :</label>
+    <select id="difficulty">
+      <option value="3">Genin 3x3</option>
+      <option value="4">Jonin 4x4</option>
+      <option value="5">Hokage 5x5</option>
+    </select>
+    <a href="../Page/Accueil.html" class="btn btn-outline-warning">  <strong> Retour à l'accueil </strong></a>
+    <button id="start">Démarrer</button>
+    <button id="reset">Réinitialiser</button>
+    <button id="nextLevel">➡️ Suivant</button>
+    <button id="resetProfile">⚠️ Réinitialiser profil</button>
+    <button id="adventureMode">🏹 Mode Aventure</button>
+<div id="adventureScore">Score cumulé : 0</div>
+    
+    <div class="badges-container">
+  <h2>🏅 Badges</h2>
+  <div id="playerBadges"></div>
+</div>
+  </div>
+
+  <div id="timer">⏱️ Temps : <strong>0s</strong></div>
+  <div id="score">Score : 0</div>
+  <div id="message"></div>
+  <div class="col-12 col-md-4" id="puzzle-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="puzzle.js"></script>
+</body>
+</html>

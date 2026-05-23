@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choix du Puzzle - Naruto</title>
+  <link rel="stylesheet" href="puzzle.css">
+  <link rel="stylesheet" href="../bootstrap/css/theme.css">
+</head>
+<body>
+  <div class="menu-container">
+    <h1>🌀 Choisis ton puzzle Naruto</h1>
+    <div class="levels">
+      <div class="level-btn">Niveau 1 - Naruto (3x3)</div>
+      <div class="level-btn">Niveau 2 - Sasuke (4x4)</div>
+      <div class="level-btn">Niveau 3 - Kakashi (5x5)</div>
+      <div class="level-btn">Niveau 4 - Itachi (5x5)</div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.level-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const level = btn.dataset.level;
+        window.location.href = `puzzle.html?level=${level}`;
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* Fond avec image responsive */
+body {
+  background: url('../Image/background-quiz.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Formulaire */
+.form-quiz {
+  max-width: 100%;
+  margin: auto;
+  background: url(../Image/madara-uchiha-portrait.jpg) no-repeat center center;
+  background-size: cover;   /* L'image couvre tout l'écran */
+  min-height: 100vh; /* Toujours au moins la hauteur d’un écran */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 8px;
+}
+/*Label*/
+label{
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+
+/* Bouton */
+.btn {
+  background-color: orangered;
+  
+}
+
+
+/* Texte header */
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+/*Center button*/
+.A-ppropos{
+  text-align: center;
+}
+
+
+/* Menu coulissant */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* caché par défaut */
+  width: 300px;
+  height: 100%;
+  background-color: orangered;
+  padding: 2rem;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+.side-menu.show {
+  right: 0; /* visible */
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.side-menu a:hover {
+  background-color:  orange;
+}
+
+
+

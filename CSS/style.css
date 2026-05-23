@@ -1,0 +1,183 @@
+
+h1{
+  font-family: Arial, sans-serif;
+}
+
+.animate-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide-left 15s linear infinite;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.form-label{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+}
+/* Animation pour les colonnes (les cartes complètes) */
+.col-12.reveal {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95) rotate(-3deg);
+  filter: blur(4px);
+  transition: all 0.8s ease;
+}
+
+.col-12.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0deg);
+  filter: blur(0);
+}
+
+video{
+  background: url(../Image/Mangetsu.jpg) no-repeat;
+  background-size: 100%;
+  border-radius: 1rem 1rem;
+  margin: auto 0;
+  box-shadow: 1rem 1rem 1rem black;
+  max-width: 100%;
+}
+
+/* Animation de défilement horizontal */
+.bandeau-anime {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+}
+
+.bandeau-item {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  flex-shrink: 0;
+}
+
+.bandeau-item img {
+  height: 60px;
+  margin-right: 10px;
+  transition: transform 0.5s ease;
+  animation: zoomRotate 2s ease-in-out infinite alternate;
+}
+
+.bandeau-item span {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@keyframes zoomRotate {
+  0%   { transform: scale(1) rotate(0deg); }
+  50%  { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1) rotate(-2deg); }
+}
+
+/*Zoom sur les carte*/
+.zoom-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.zoom-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 128, 0, 0.3);
+}
+
+
+/* Zoom sur les images */
+.zoom-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.zoom-img {
+  transition: transform 0.5s ease;
+}
+
+.zoom-img:active {
+  transform: scale(1.12); /* Zoom doux au survol ou au toucher */
+}
+
+
+/* Mise en page générale */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+.bag {
+  background: url(../Image/naruto-village-hidden-in-leaves-landscape.jpg) no-repeat center center;
+  background-size: cover;   /* L'image couvre tout l'écran */
+  background-attachment: fixed; /* Le fond reste fixe (style pro) */
+  min-height: 100vh; /* Toujours au moins la hauteur d’un écran */
+}
+@media screen and (max-width: 768px) {
+  .A-ppropos {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  video {
+    height: auto;
+    max-height: 200px;
+  }
+}
+.card {
+  background-color:white;
+  border-radius: 2rem 2rem ;
+  box-shadow: 1rem 1rem 1rem black;
+  opacity: 20;
+  transition-duration: 0.8;
+}
+
+
+.A-ppropos{
+  text-align: center;
+  font-size: 1.5rem;
+  color: orangered;
+}
+.bandeau{
+  background-color: rgb(248, 145, 9);
+}
+.btn{
+  background-color: orangered;
+  color: white;
+}
+
+/* Menu coulissant */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* caché par défaut */
+  width: 300px;
+  height: 100%;
+  background-color: orangered;
+  padding: 2rem;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+.side-menu.show {
+  right: 0; /* visible */
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.side-menu a:hover {
+  background-color:  orange;
+}
+

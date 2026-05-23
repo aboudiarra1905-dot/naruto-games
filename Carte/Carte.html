@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Naruto - Jeu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>🌀 Memory Naruto</h1>
+    <div class="stats">
+      <p> <strong> ⏱ Temps :</strong> <span id="time">0</span>s</p>
+      <p> <strong>🖐 Coups :</strong> <span id="moves">0</span></p>
+    </div>
+    
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div id="winMessage" class="hidden">
+      <h2>🎉 Bravo, tu as gagné ! 🎉</h2>
+      <button id="restart">Rejouer</button>
+      <button id="menu">🏠 Retour au menu</button>
+      <button id="accueil">🏠 Retour à l'accuil</button>
+    </div>
+  </div>
+
+  <!-- SONS -->
+  <audio id="bg-music" src="audio/background.mp3" loop></audio>
+  <audio id="flip-sound" src="audio/flip.mp3"></audio>
+  <audio id="match-sound" src="audio/match.mp3"></audio>
+  <audio id="win-sound" src="audio/win.mp3"></audio>
+  
+  <div id="highscores">
+  <h3>🏆 Meilleurs temps</h3>
+  <ul id="scoreList"></ul>
+</div>
+<br><br>
+<div>
+<a href="../Page/Accueil.html" class="btn"><strong>RETOUR A L'ACCUEIL</strong></a>
+</div>
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

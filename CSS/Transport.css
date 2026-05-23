@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(../Image/shuriken.jpg) no-repeat center center;
+  background-size: cover;   /* L'image couvre tout l'écran */
+  background-attachment: fixed; /* Le fond reste fixe (style pro) */
+  min-height: 100vh; /* Toujours au moins la hauteur d’un écran */
+}
+
+.transport-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,128,0,0.3);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.transport-card img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  transition: transform 0.5s ease;
+}
+
+.effect-btn {
+  margin-top: 1rem;
+}
+
+/* Animation éclair (Minato) */
+@keyframes eclair {
+  0% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+/* Animation tournesol (Obito) */
+@keyframes tournesol {
+  0% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(360deg); opacity: 1; }
+  100% { transform: scale(0) rotate(720deg); opacity: 0; }
+}
+
+.animate-eclair {
+  animation: eclair 1.2s forwards;
+}
+
+.animate-tournesol {
+  animation: tournesol 1.5s forwards;
+}
+
+.btn{
+  background-color: orangered;
+}
+
+/* Menu coulissant */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* caché par défaut */
+  width: 300px;
+  height: 100%;
+  background-color: orangered;
+  padding: 2rem;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+.side-menu.show {
+  right: 0; /* visible */
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.side-menu a:hover {
+  background-color:  orange;
+}
+
+.A-ppropos{
+  text-align: center;
+  font-size: 1.5rem;
+  color: orangered;
+}
+
+
+

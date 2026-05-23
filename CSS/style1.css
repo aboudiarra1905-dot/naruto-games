@@ -1,0 +1,115 @@
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-
+
+serif;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  color: #ff9800;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn.primary {
+  background: #ff9800;
+  color: #000;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ff9800;
+
+  color: #ff9800;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* FADE IN ANIMATION */
+.fade-in {
+
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 2.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

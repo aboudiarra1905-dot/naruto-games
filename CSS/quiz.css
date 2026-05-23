@@ -1,0 +1,174 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+body
+{
+  background: url(../Image/ashura-senju-ninja.jpg) no-repeat center center;
+  background-size: cover;   /* L'image couvre tout l'écran */
+  background-attachment: fixed; /* Le fond reste fixe (style pro) */
+  min-height: 100vh; /* Toujours au moins la hauteur d’un écran */
+}
+/* Fond de la page Quiz */
+.quiz-bg {
+  
+  background-size: cover;       /* étend l’image */
+  background-position: center;  /* centre l’image */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: black;
+  text-align: center;
+}
+
+/* Conteneur quiz */
+.quiz-container {
+    background-image: url(../Image/Naruto\ Rikudo\ \(1\).jpg);
+ 
+  max-width: 700px;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Question */
+.question h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.question img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+/* Options */
+.options label {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.options label:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton Suivant */
+#next {
+  padding: 10px 25px;
+  margin-top: 20px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#next:hover {
+  background-color: rgb(255, 230, 0);
+  color: black;
+}
+
+/* Barre de progression */
+#progress-bar {
+  height: 12px;
+  background-color: orangered;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* Confetti */
+#confetti span {
+  border-radius: 50%;
+}
+
+/* Images responsive */
+
+/* Responsive général */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 2rem 1rem;
+  }
+  .question img {
+    max-width: 100px;
+  }
+}
+
+
+/* Cacher les cercles radio */
+.options input[type="radio"] {
+  display: none;
+}
+
+/* Style des options comme des boutons */
+.options label {
+  display: block;
+  padding: 12px;
+  margin: 8px 0;
+  background: orangered;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+/* Effet hover */
+.options label:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+/* Quand on sélectionne une option */
+.options input[type="radio"]:checked + label {
+  background-color:  green;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn{
+  background-color: orangered;
+  color: white;
+}
+
+
+/* Menu coulissant */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* caché par défaut */
+  width: 300px;
+  height: 100%;
+  background-color: orangered;
+  padding: 2rem;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+.side-menu.show {
+  right: 0; /* visible */
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.side-menu a:hover {
+  background-color:  orange;
+}
+

@@ -1,0 +1,128 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #0a0a0a, #1a1a1a);
+  color: #fff;
+  text-align: center;
+}
+
+.profil-container {
+  background: linear-gradient(to right, #00ff99, #0099ff);
+  padding: 20px;
+  margin: 20px auto;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+#rankBar {
+  width: 0%;
+  height: 20px;
+  background-color: gold;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: width 1s ease;
+}
+
+#puzzle-container {
+  display: grid;
+  margin: 20px auto;
+  gap: 2px;
+}
+
+.piece {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.controls button, .controls select {
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls button:hover, .controls select:hover {
+  background-color: #33ffbb;
+}
+
+
+
+.badges-container {
+  text-align: center;
+  margin: 20px auto;
+  width: 300px;
+  background: linear-gradient(to right, #ff9d00, #00ff99);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+#playerBadges span {
+  font-size: 2rem;
+  margin: 5px;
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+#playerBadges span.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#resetProfile {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-weight: bold;
+}
+
+#resetProfile:hover {
+  background-color: #ff1a1a;
+}
+
+
+/* === MENU === */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  margin: 0 20px;
+}
+
+.menu-container h1 {
+  color: #00ff80;
+  margin-bottom: 15px;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.level-btn {
+  background: #00ff80;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000;
+}
+
+.level-btn:hover { background: #00cc66; transform: scale(1.05); }

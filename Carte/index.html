@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Naruto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="menu-container">
+    <h1>🌀 Memory Naruto</h1>
+    <p>Choisis ton niveau :</p>
+    <div class="levels">
+      <button class="level-btn" data-level="facile">🟢 Facile (6 paires)</button>
+      <button class="level-btn" data-level="moyen">🟡 Moyen (8 paires)</button>
+      <button class="level-btn" data-level="difficile">🔴 Difficile (10 paires)</button>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.level-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const level = btn.dataset.level;
+        window.location.href = `Carte.html?level=${level}`;
+      });
+    });
+  </script>
+
+</body>
+</html>
